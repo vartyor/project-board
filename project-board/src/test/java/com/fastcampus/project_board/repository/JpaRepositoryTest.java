@@ -12,10 +12,8 @@ import org.springframework.test.context.ActiveProfiles;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @ActiveProfiles("testdb")
-//@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE) // 테스트 상태에서 실행 시 테스트용 DB를 불러오지 않고 yaml에서 설정한 실제 DB인 testdb를 사용할 것이다.
 @DisplayName("JPA 연결 테스트")
 @Import(JpaConfig.class)
 @DataJpaTest    // 슬라이스 테스트, 내부에 @ExtendsWith(SpringExtension.class) 존재, SpringExtension.class에는 autowired 키워드가 존재, @Auto~Database에 의해 Test DB를 사용하지 않는다.
@@ -72,7 +70,6 @@ class JpaRepositoryTest {
 
         // when
         Article savedArticle = articleRepository.saveAndFlush(article); // JPA Repository의 메서드
-//       articleRepository.flush();
 
         // then
         assertThat(savedArticle)

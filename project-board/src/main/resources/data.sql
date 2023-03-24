@@ -1,3 +1,10 @@
+-- 테스트 계정
+-- TODO: 테스트용이지만 비밀번호가 노출된 데이터 세팅. 개선하는 것이 좋을 지 고민해보자.
+insert into user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) values
+('vartyor', 'asdf1234', 'Vartyor', 'varute@gmail.com', 'Good morning everybody~!', now(), 'vartyor', now(), 'vartyor')
+;
+
+-- 123 게시글
 insert into article (title, content, hashtag, created_by, modified_by, created_at, modified_at) values ('Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.', 'Aquamarine', 'Gabi', 'Chariot', '2022-10-30 17:15:35', '2022-11-08 16:16:34');
 insert into article (title, content, hashtag, created_by, modified_by, created_at, modified_at) values ('Cras pellentesque volutpat dui.', 'Fusce consequat. Nulla nisl. Nunc nisl.', 'Red', 'Zsazsa', 'Sayers', '2023-02-13 02:33:33', '2022-08-03 11:24:32');
 insert into article (title, content, hashtag, created_by, modified_by, created_at, modified_at) values ('Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.', 'Crimson', 'Cornelia', 'Kirbee', '2023-03-14 09:40:10', '2022-08-16 07:38:04');
@@ -122,6 +129,7 @@ insert into article (title, content, hashtag, created_by, modified_by, created_a
 insert into article (title, content, hashtag, created_by, modified_by, created_at, modified_at) values ('Proin at turpis a pede posuere nonummy.', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.', 'Puce', 'Willard', 'Flint', '2022-10-15 00:27:52', '2023-02-10 10:56:59');
 insert into article (title, content, hashtag, created_by, modified_by, created_at, modified_at) values ('Proin interdum mauris non ligula pellentesque ultrices.', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.', null, 'Gisela', 'Laraine', '2023-01-22 08:47:57', '2022-12-21 16:05:12');
 
+-- 300 댓글
 insert into article_comment (created_at, created_by, modified_at, modified_by, content, article_id) values ('2022-09-27 00:26:59', 'Hermon', '2022-09-22 20:35:02', 'Stephine', 'Integer ac neque.', 107);
 insert into article_comment (created_at, created_by, modified_at, modified_by, content, article_id) values ('2023-03-02 15:10:33', 'Margit', '2022-12-25 23:36:42', 'Ethelbert', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.', 105);
 insert into article_comment (created_at, created_by, modified_at, modified_by, content, article_id) values ('2022-07-15 13:06:49', 'Rowland', '2022-10-22 04:33:53', 'Seka', 'Vivamus vel nulla eget eros elementum pellentesque.', 18);
