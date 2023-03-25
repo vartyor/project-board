@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 @ToString
 @EntityListeners(AuditingEntityListener.class)
 @MappedSuperclass
-public class AuditingFields {
+public abstract class AuditingFields {
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) // 웹 화면에 보여줄 때, 웹 화면에서 파라미터를 받아 세팅할 때 parsing에 대한 rule 정의
     @CreatedDate
