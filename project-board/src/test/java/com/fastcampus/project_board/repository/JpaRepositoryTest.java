@@ -2,6 +2,7 @@ package com.fastcampus.project_board.repository;
 
 import com.fastcampus.project_board.config.JpaConfig;
 import com.fastcampus.project_board.domain.Article;
+import com.fastcampus.project_board.domain.UserAccount;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,13 +22,16 @@ class JpaRepositoryTest {
 
     private final ArticleRepository articleRepository; // autoWiring 로직 덕분에 생성자 주입 패턴으로 필드 생성 가능
     private final ArticleCommentRepository articleCommentRepository;
+    private final UserAccountRepository userAccountRepository;
 
     public JpaRepositoryTest(
             @Autowired ArticleRepository articleRepository,
-            @Autowired ArticleCommentRepository articleCommentRepository)
+            @Autowired ArticleCommentRepository articleCommentRepository,
+            @Autowired UserAccountRepository userAccountRepository)
     {
         this.articleRepository = articleRepository;
         this.articleCommentRepository = articleCommentRepository;
+        this.userAccountRepository = userAccountRepository;
     }
 
     @DisplayName("select 테스트")
@@ -50,9 +54,11 @@ class JpaRepositoryTest {
     void givenTestData_whenInserting_thenWorksFine() {
         // given
         long previousCount = articleRepository.count();
+        UserAccount userAccount = userAccountRepository.save(UserAccount.of("vartyor","asdf1234", null, null, null));
+        Article article = Article.of(userAccount, "new Article", "new Content", "#spring");
 
         // when
-        Article savedArticle = articleRepository.save(Article.of("new article", "new content", "#spring"));
+        articleRepository.save(article);
 
         // then
         assertThat(articleRepository.count())
