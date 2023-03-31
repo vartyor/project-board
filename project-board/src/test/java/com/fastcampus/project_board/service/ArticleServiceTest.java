@@ -186,7 +186,8 @@ class ArticleServiceTest {
 
     private ArticleDto createArticleDto(String title, String content, String hashtag) {
         return ArticleDto.of(
-          createUserAccountDto(),
+                1L,
+                createUserAccountDto(),
                 title,
                 content,
                 hashtag,
