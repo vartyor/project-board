@@ -53,14 +53,14 @@ class ArticleServiceTest {
         SearchType searchType = SearchType.TITLE;
         String keyword = "title";
         Pageable pageable = Pageable.ofSize(20);
-        given(articleRepository.findByTitle(keyword,pageable)).willReturn(Page.empty());
+        given(articleRepository.findByTitleContaining(keyword,pageable)).willReturn(Page.empty());
 
         //when
         Page<ArticleDto> articles = sut.searchArticles(searchType,keyword, pageable); // 제목, 본문, ID, 닉네임, 해시태그
 
         //then
         assertThat(articles).isEmpty();
-        then(articleRepository).should().findByTitle(keyword, pageable);
+        then(articleRepository).should().findByTitleContaining(keyword, pageable);
     }
 
     @DisplayName("게시글을 조회하면 게시글을 반환한다.")
