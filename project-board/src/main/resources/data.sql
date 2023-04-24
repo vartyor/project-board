@@ -3,6 +3,9 @@
 insert into user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) values
 ('vartyor', 'asdf1234', 'Vartyor', 'varute1997@gmail.com', 'Good morning everybody~!', now(), 'vartyor', now(), 'vartyor')
 ;
+insert into user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) values
+('vartyor2', 'asdf1234', 'Vartyor2', 'varute1999@gmail.com', 'Good evening everybody~!', now(), 'vartyor2', now(), 'vartyor2')
+;
 
 -- 123 게시글
 insert into article (user_account_id, title, content, hashtag, created_by, created_at, modified_by, modified_at) values (1, 'Etiam vel augue.', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', '#Purple', 'Corissa', '2022-11-25 23:06:00', 'Corissa', '2022-07-01 04:38:42');
@@ -13,13 +16,13 @@ insert into article (user_account_id, title, content, hashtag, created_by, creat
 
 In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.', '#Orange', 'Perceval', '2023-02-13 01:47:16', 'Perceval', '2023-03-03 07:39:06');
 insert into article (user_account_id, title, content, hashtag, created_by, created_at, modified_by, modified_at) values (1, 'Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.', '#Khaki', 'Erhard', '2022-05-25 18:03:23', 'Erhard', '2022-12-19 02:01:38');
-insert into article (user_account_id, title, content, hashtag, created_by, created_at, modified_by, modified_at) values (1, 'Donec posuere metus vitae ipsum.', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.', '#Red', 'Emlen', '2022-07-08 14:23:18', 'Emlen', '2022-09-17 00:12:17');
+insert into article (user_account_id, title, content, hashtag, created_by, created_at, modified_by, modified_at) values (2, 'Donec posuere metus vitae ipsum.', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.', '#Red', 'Emlen', '2022-07-08 14:23:18', 'Emlen', '2022-09-17 00:12:17');
 insert into article (user_account_id, title, content, hashtag, created_by, created_at, modified_by, modified_at) values (1, 'Nulla justo.', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
 
 Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
 
 Sed ante. Vivamus tortor. Duis mattis egestas metus.', '#Turquoise', 'Margarette', '2023-01-08 02:17:20', 'Margarette', '2022-04-07 21:45:51');
-insert into article (user_account_id, title, content, hashtag, created_by, created_at, modified_by, modified_at) values (1, 'Morbi porttitor lorem id ligula.', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
+insert into article (user_account_id, title, content, hashtag, created_by, created_at, modified_by, modified_at) values (2, 'Morbi porttitor lorem id ligula.', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
 
 Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
 
@@ -40,10 +43,10 @@ In congue. Etiam justo. Etiam pretium iaculis justo.', '#Yellow', 'Renault', '20
 insert into article (user_account_id, title, content, hashtag, created_by, created_at, modified_by, modified_at) values (1, 'Cras in purus eu magna vulputate luctus.', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
 
 Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '#Teal', 'Pennie', '2023-02-03 22:32:55', 'Pennie', '2022-08-04 09:37:30');
-insert into article (user_account_id, title, content, hashtag, created_by, created_at, modified_by, modified_at) values (1, 'Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.', '#Violet', 'Hallsy', '2022-05-24 17:29:34', 'Hallsy', '2022-12-31 04:09:57');
+insert into article (user_account_id, title, content, hashtag, created_by, created_at, modified_by, modified_at) values (2, 'Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.', '#Violet', 'Hallsy', '2022-05-24 17:29:34', 'Hallsy', '2022-12-31 04:09:57');
 insert into article (user_account_id, title, content, hashtag, created_by, created_at, modified_by, modified_at) values (1, 'Maecenas rhoncus aliquam lacus.', 'In congue. Etiam justo. Etiam pretium iaculis justo.', '#Indigo', 'Annalise', '2023-03-01 01:38:53', 'Annalise', '2023-01-29 11:55:44');
 insert into article (user_account_id, title, content, hashtag, created_by, created_at, modified_by, modified_at) values (1, 'Phasellus sit amet erat.', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.', '#Goldenrod', 'Fanny', '2022-11-09 13:08:40', 'Fanny', '2022-08-30 05:04:35');
-insert into article (user_account_id, title, content, hashtag, created_by, created_at, modified_by, modified_at) values (1, 'Nulla nisl.', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
+insert into article (user_account_id, title, content, hashtag, created_by, created_at, modified_by, modified_at) values (2, 'Nulla nisl.', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
 
 Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.', '#Purple', 'Juliana', '2022-11-25 19:49:42', 'Juliana', '2023-01-22 18:54:51');
 insert into article (user_account_id, title, content, hashtag, created_by, created_at, modified_by, modified_at) values (1, 'Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.', 'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '#Yellow', 'Claudelle', '2023-03-27 09:09:07', 'Claudelle', '2022-07-26 14:14:57');
