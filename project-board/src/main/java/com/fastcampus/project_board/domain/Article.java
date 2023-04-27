@@ -24,7 +24,7 @@ public class Article extends AuditingFields{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; // JPA persistence context가 영속화를 할 때 자동으로 부여하는 고유 번호
 
-    @Setter @ManyToOne(optional = false) private UserAccount userAccount; // 유저 정보(ID)
+    @Setter @ManyToOne(optional = false) @JoinColumn(name = "userId") private UserAccount userAccount; // 유저 정보(ID)
 
     @Setter @Column(nullable = false) private String title; // 제목
     @Setter @Column(nullable = false, length = 10000) private String content; // 본문
