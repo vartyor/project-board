@@ -3,7 +3,6 @@ package com.fastcampus.project_board.DTO.response;
 import com.fastcampus.project_board.DTO.ArticleCommentDto;
 import com.fastcampus.project_board.DTO.ArticleDto;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
 public record ArticleResponse(
@@ -14,7 +13,7 @@ public record ArticleResponse(
         LocalDateTime createdAt,
         String email,
         String nickname
-) implements Serializable {
+)  {
 
     public static ArticleResponse of(Long id, String title, String content, String hashtag, LocalDateTime createdAt, String email, String nickname){
         return new ArticleResponse(id, title, content, hashtag, createdAt, email, nickname);
