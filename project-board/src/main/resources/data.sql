@@ -360,7 +360,7 @@ insert into article (user_id, title, content, hashtag, created_by, created_at, m
 
 
 -- 300 댓글
-insert into article_comment (article_id, user_id, content, created_by, created_at, modified_by, modified_at) values (34, 'vartyor' 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.', 'Reece', '2022-11-27 13:47:12', 'Reece', '2022-09-14 10:43:09');
+insert into article_comment (article_id, user_id, content, created_by, created_at, modified_by, modified_at) values (34, 'vartyor', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.', 'Reece', '2022-11-27 13:47:12', 'Reece', '2022-09-14 10:43:09');
 insert into article_comment (article_id, user_id, content, created_by, created_at, modified_by, modified_at) values (93, 'vartyor', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.', 'Saxon', '2023-04-01 01:06:46', 'Saxon', '2023-03-04 21:47:30');
 insert into article_comment (article_id, user_id, content, created_by, created_at, modified_by, modified_at) values (105, 'vartyor', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.', 'Leigh', '2023-01-23 16:49:36', 'Leigh', '2022-06-16 20:04:03');
 insert into article_comment (article_id, user_id, content, created_by, created_at, modified_by, modified_at) values (48, 'vartyor', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.', 'Erwin', '2023-03-20 07:34:47', 'Erwin', '2022-10-10 17:17:05');
