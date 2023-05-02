@@ -12,7 +12,7 @@
         <attr sel="#article-content/pre" th:text="*{content}"/>
 
         <attr sel="#article-buttons">
-            <attr sel="#delete-article-form" th:action="'/articles' + *{id} + '/delete'" th:method="post">
+            <attr sel="#delete-article-form" th:action="'/articles/' + *{id} + '/delete'" th:method="post">
                 <attr sel="#update-article" th:href="'/articles/' + *{id} + '/form'" />
             </attr>
         </attr>
