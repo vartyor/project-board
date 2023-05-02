@@ -57,8 +57,8 @@ public class Article extends AuditingFields{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Article article)) return false;
-        return id != null && id.equals(article.id);
+        if (!(o instanceof Article that)) return false;
+        return id != null && id.equals(that.getId());
         // id 가 null인 경우는 영속화가 일어나지 않아 entity가 구성되지 않은 시점
     }
 
