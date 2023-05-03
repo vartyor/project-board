@@ -7,16 +7,20 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
+import org.springframework.data.domain.AuditorAware;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.test.context.ActiveProfiles;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@ActiveProfiles("testdb")
 @DisplayName("JPA 연결 테스트")
-@Import(JpaConfig.class)
+@Import(JpaRepositoryTest.TestJpaConfig.class)
 @DataJpaTest    // 슬라이스 테스트, 내부에 @ExtendsWith(SpringExtension.class) 존재, SpringExtension.class에는 autowired 키워드가 존재, @Auto~Database에 의해 Test DB를 사용하지 않는다.
 class JpaRepositoryTest {
 
@@ -101,4 +105,14 @@ class JpaRepositoryTest {
         assertThat(articleCommentRepository.count())
                 .isEqualTo(previousArticleCommentCount - deletedCommentSize);
     }
+
+    @EnableJpaAuditing
+    @TestConfiguration
+    public static class TestJpaConfig {
+        @Bean
+        public AuditorAware<String> auditorAware() {
+            return () -> Optional.of("vartyor");
+        }
+    }
+
 }
